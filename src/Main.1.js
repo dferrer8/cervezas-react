@@ -6,14 +6,17 @@ import CervezasList from './CervezasList'
 import Clock from './Clock'
 import './Main.css'
 
-// con funciones quitando los return (si solo hago un render no necesito tantas)
-const Main = () => (
+const Main = () => {
+  return (
+    <div>
       <main>
         <SearchBox />
         <CervezasList />
         <Clock />
       </main>
-)
+    </div>
+  )
+}
 
 export default Main
 
