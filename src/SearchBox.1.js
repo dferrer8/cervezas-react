@@ -8,10 +8,9 @@ export default class SearchBox extends Component {
   }
 
   handleChange = evento => {
-/*     // console.log('Me han pulsado')
+    // console.log('Me han pulsado')
     console.log(evento.target.value) // envia el texto que voy escribiendo. Tiene un evento que cambia el contenido consigo al input podría poner un value="Escribe cerveza"
-    this.setState({disabled:false}) // activa boton */
-    this.setState({disabled: evento.target.value ? false: true})// controlo estados
+    this.setState({disabled:false}) // activa boton
   }
   
   render() {
