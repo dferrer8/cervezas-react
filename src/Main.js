@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import SearchBox from './SearchBox'
 import CervezasList from './CervezasList'
+import Clock from './Clock'
 import './Main.css'
 
 export class Main extends Component {
@@ -9,6 +10,7 @@ export class Main extends Component {
       <main>
         <SearchBox />
         <CervezasList />
+        <Clock />
       </main>
     )
   }
