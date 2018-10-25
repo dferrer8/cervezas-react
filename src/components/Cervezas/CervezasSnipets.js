@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-function CervezasSnipets() {
+function CervezasSnipets(props) {
   return (
     <div>
       <article>

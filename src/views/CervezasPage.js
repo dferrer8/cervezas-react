@@ -10,7 +10,7 @@ export default function () {
   return (
     <div>
       <SearchBox />
-      <CervezasList cervezas={cervezas}/>
+      <CervezasList cervezas = {cervezas}/>
     </div>
   )
 }
