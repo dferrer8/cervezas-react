@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-function CervezasSnipets(props) {
-  const {nombre, desc} = props
+function CervezasSnipets({nombre, desc}) {
+  // const {nombre, desc} = props
   return (
     <div>
       <article>
