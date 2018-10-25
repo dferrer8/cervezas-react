@@ -21,11 +21,12 @@ export default class SearchBox extends Component {
       disabled: searchText ? false: true,
       searchText
     }) 
+    this.props.filter(searchText)
   }
   // controlo el evento porque ocurre en mi aplicacion
   handleSubmit = evento => {
     evento.preventDefault() // evito que se vaya por defecto fuera
-    this.props.filter(this.state.searchText) // este texto se pasara desde arriba
+    // this.props.filter(this.state.searchText) // este texto se pasara desde arriba
   }
   
   render() {
