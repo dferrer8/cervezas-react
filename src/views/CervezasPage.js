@@ -29,8 +29,8 @@ export default class CervezasPage extends Component {
     const { cervezas } = this.state
     const aux = cervezas.filter(
       cerveza =>
-        cerveza.nombre.includes(searchText) || 
-        cerveza.descripción.includes(searchText)
+        cerveza.nombre.toUpperCase().includes(searchText.toUpperCase()) || 
+        cerveza.descripción.toUpperCase().includes(searchText.toUpperCase())
     )
     this.setState({cervezasFiltradas: aux})
   }
