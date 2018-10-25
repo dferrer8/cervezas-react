@@ -12,7 +12,8 @@ export default class CervezasPage extends Component {
 
   state = {
     cervezas: [],
-    error: ''
+    error: '',
+    cervezasFiltradas: []
   }
   componentDidMount =  () => {
     this.setState({error: ''}) // inicializo el error
@@ -24,14 +25,22 @@ export default class CervezasPage extends Component {
         this.setState({ error: error.message }) // por si recibo otro error
       })
   }
-
+  handleFilter = searchText =>{  
+    const { cervezas } = this.state
+    const aux = cervezas.filter(
+      cerveza =>
+        cerveza.nombre.includes(searchText) || 
+        cerveza.descripción.includes(searchText)
+    )
+    this.setState({cervezasFiltradas: aux})
+  }
 
   render() {
-    const { cervezas, error } = this.state
+    const { cervezasFiltradas, error } = this.state
     return (
       <div>
-      <SearchBox />
-      <CervezasList cervezas = {cervezas}/>
+      <SearchBox filter={this.handleFilter}/>
+      <CervezasList cervezas = {cervezasFiltradas}/>
       {error ? <p>{error}</p> :''}
     </div>
     )
