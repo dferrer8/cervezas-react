@@ -8,7 +8,7 @@ const CervezasList = (props) => {
   return (
     <div>
       {cervezas.map(cerveza => (
-        <CervezaSnippet key={cervezas.nombre} nombre={cerveza.nombre} desc ={cerveza.descripción}/>
+        <CervezaSnippet key={cerveza.nombre} nombre={cerveza.nombre} desc ={cerveza.descripción} envase = {cerveza.envase}/>
       ))}
     </div>
   )
@@ -17,7 +17,8 @@ const CervezasList = (props) => {
 CervezasList.propTypes = {
   cervezas: PropTypes.arrayOf(PropTypes.shape({
     nombre: PropTypes.string.isRequired,
-    desc: PropTypes.string
+    desc: PropTypes.string,
+    envase: PropTypes.string
   })
   ).isRequired
 }
