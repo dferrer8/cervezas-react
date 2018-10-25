@@ -8,7 +8,7 @@ const CervezasList = (props) => {
   return (
     <div>
       {cervezas.map(cerveza => (
-        <CervezaSnippet nombre={cerveza.nombre} desc ={cerveza.desc}/>
+        <CervezaSnippet key={cervezas.nombre} nombre={cerveza.nombre} desc ={cerveza.desc}/>
       ))}
     </div>
   )
